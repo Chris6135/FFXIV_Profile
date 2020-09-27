@@ -157,11 +157,11 @@ h5{
 		position: absolute;
 		bottom:0;
 		background:black;
-		height: 25%;
+		/* height: 25%; */
 		width: 100%;
 		display: flex;
 		flex-direction: column;
-		padding: 0 5 10 5;
+		padding: 10 5 10 5;
 		animation: 2s ease-out 0s 1 riseup;
 	}
 
