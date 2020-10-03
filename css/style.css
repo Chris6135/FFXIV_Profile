@@ -58,6 +58,8 @@ table {
 	background-image:url(../background2.png)	;
 	background-size:cover;
 	background-repeat: no-repeat;
+	min-width: 100%;
+	width:fit-content;
 
 	/* background:darkblue */
 	/* width:100%;
@@ -502,7 +504,10 @@ h5{
 		font-size:26;
 		align-items:center;
 		width: 150;
-		padding-left:10px;
+		}
+
+		.content div > h5{
+			padding-left:20px;
 		}
 
 		.hooks-parent >.text-parent> div{
@@ -510,9 +515,37 @@ h5{
 			flex-direction: column;
 		}
 
+		.subtitle {
+			padding:20 10 15 10;
+			width:fit-content !important;
+			align-self: center;
+			line-height: 0.5;
+			text-align: center;
+			display: inline-block;
+			position: relative;  
+		  }
+		  .subtitle:before,
+		  .subtitle:after {
+			content: "";
+			position: absolute;
+			height: 5px;
+			border-top: 3px solid white;
+			top: 50%;
+			width: 450px;
+		  }
+		  .subtitle:before {
+			right: 100%;
+			/* margin-right: 15px; */
+		  }
+		  .subtitle:after {
+			left: 100%;
+			/* margin-left: 15px; */
+		  }
+
+
 		.hooks-parent > .text-parent >div>div{
 			padding-top:10;
-			border-bottom:1px solid white;
+			/* border-bottom:1px solid white; */
 			padding-bottom:10px
 		}
 
