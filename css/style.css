@@ -516,6 +516,13 @@ h5{
 			overflow: hidden;
 		}
 
+		.hooks-parent > .text-parent >div>div{
+			padding-top:10;
+			/* border-bottom:1px solid white; */
+			padding-bottom:10px
+		}
+
+
 		.subtitle {
 			padding:20 10 15 10;
 			width:fit-content !important;
@@ -544,11 +551,6 @@ h5{
 		  }
 
 
-		.hooks-parent > .text-parent >div>div{
-			padding-top:10;
-			/* border-bottom:1px solid white; */
-			padding-bottom:10px
-		}
 
 
 
