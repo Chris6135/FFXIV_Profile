@@ -16,12 +16,6 @@ function run(){
     let hideToggle = true;
   
 
-
-    function test(){
-        console.log(page);
-        console.log(selected);
-    }
-
     function hideClass(selectedClass){
 
         if(hideToggle){ 
@@ -84,18 +78,12 @@ function run(){
                 content.setAttribute("class", unHideClass(content.getAttribute("class")))
                 contentToggle = false
                 }
-
-                console.log(previousButton)
-
-
                     if(selected){
                         oldSelected = selected
                         previousButton = document.querySelector(".button."+selected);
                     }
                     // previousButton.setAttribute("class", unHideClass(previousButton.getAttribute("class"))) //hide button variant
                     // previousButton.setAttribute("class", unPressButton(previousButton.getAttribute("class")))  //push button variant
-
-                console.log(previousButton)
 
                 
                 let selectedClass = page.getAttribute("class");
@@ -203,9 +191,10 @@ function run(){
         )})
     }
 
-    function hookClickers(){
-        let hookButtons = document.querySelectorAll(".hook");
-        hookButtons.forEach((hook)=>{
+
+    function hookClickers(stuff){
+        let buttons = document.querySelectorAll(stuff);
+        buttons.forEach((hook)=>{
             hook.addEventListener("click", ()=>{
                 let   secClass = hook.getAttribute("class")
                 let target = document.querySelector(hook.getAttribute("data"))
@@ -219,17 +208,19 @@ function run(){
                 }
             })
         })
-
-
-
     }
+
+
+
+
 
 
 
     
     setClickers(document.querySelectorAll(".section-selector"));
     setClickers(document.querySelectorAll(".point"));
-    hookClickers()
+    hookClickers(".hook");
+    hookClickers(".plus");
 
     setButtons();
 
